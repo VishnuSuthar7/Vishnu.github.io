@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration-form</title>
+</head>
+<style>
+    
+    body {
+        padding: 2rem 20rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: rgb(6, 6, 83);
+        
+
+
+    }
+
+    h1 {
+        color: white;
+    text-align: center;
+    }
+
+    form {
+        border: 1px solid white;
+        border-radius: 9px;
+        padding: 20px 20px;
+        margin: 20px 20px;
+    }
+
+    .formdesign {
+        font-size: 20px;
+        /* border: 1px solid black; */
+        width: 500px;
+        color: white;
+
+
+    }
+
+    .formdesign input {
+        width: 100%;
+        padding: 12px 20px;
+        border: 1px solid blue;
+        margin: 14px;
+        border-radius: 7px;
+        font-size: 15px;
+    }
+
+    .formerror {
+        color: red;
+    }
+
+    .button {
+        border-radius: 9px;
+        width: 150px;
+        height: 50px;
+        font-size: 25px;
+        margin: 22px 20px;
+        background-color: white;
+        transition: .4s;
+        display: block;
+        margin-top: 90px;
+        margin-left: 230px;
+        
+        
+
+
+    }
+
+    .button:hover {
+
+        background-color: rgb(7, 160, 15);
+        cursor: pointer;
+    }
+    #element {
+            color: rgb(255, 255, 255);
+        }
+        
+
+</style>
+
+<body>
+    <div class="div1">
+    <h1>Registration-form</h1>
+    <marquee behavior="" direction=""><span id="element"></span></marquee>
+    <form action="/myaction.php" name="myForm" onsubmit="return validateForm()" method="post">
+        <div class="formdesign" id="name">
+            <label for="fname">User Name :</label>
+            <input type="text" name="fname" placeholder="User-Name">
+            <b><span class="formerror"></span></b>
+        </div>
+
+        <div class="formdesign" id="email">
+            <label for="email">Email :</label>
+            <input type="email" name="femail" placeholder="123@gmail.com">
+            <b><span class="formerror"></span></b>
+        </div>
+        <div class="formdesign" id="phone">
+            <label for="phone">Phone-number :</label>
+            <input type="phone" name="fphone" placeholder="123-456-7890">
+            <b><span class="formerror"></span></b>
+        </div>
+        <div class="formdesign" id="password">
+            <label for="password">password :</label>
+            <input type="password" name="fpassword" placeholder="password">
+            <b><span class="formerror"></span></b>
+        </div>
+        <div class="formdesign" id="cpassword">
+            <label for="cpassword">Confirm password :</label>
+            <input type="cpassword" name="fcpassword" placeholder="password">
+            <b><span class="formerror"></span></b>
+        </div>
+        <input class="button" type="submit" value="submit">
+
+    </form>
+</div>
+</body>
+
+<script>
+    function clearerror() {
+        errors = document.getElementsByClassName('formerror')
+    }
+    function seterror(id, error) {
+        element = document.getElementById(id);
+        element.getElementsByClassName('formerror')[0].innerHTML = error;
+
+    }
+    function validateForm() {
+        var returnval = true;
+        var name = document.forms['myForm']["fname"].value;
+        if (name.length < 5) {
+            seterror("name", "*Length of the name if too short");
+            returnval = false;
+        }
+        if (name.length == 0) {
+            seterror("name", "*required");
+            returnval = false;
+        }
+        var email = document.forms['myForm']["femail"].value;
+        if (email.length > 30) {
+            seterror("email", "*Length of the name if too long");
+            returnval = false;
+        }
+        if (email.length == 0) {
+            seterror("email", "*required");
+            returnval = false;
+        }
+        var phone = document.forms['myForm']["fphone"].value;
+        if(phone.length>10 || phone.length<10){
+            
+            seterror("phone", "*phone number should be 10 digits");
+            returnval = false;
+        }
+        if (phone.length == 0) {
+            seterror("phone", "*required");
+            returnval = false;
+        }
+        var password = document.forms['myForm']["fpassword"].value;
+        if (password.length < 8)
+        if(password.length>8 || password.length<12) {
+            seterror("password", "*Password should be atleast 8 characters long");
+            returnval = false;
+        }
+        if (password.length == 0) {
+            seterror("password", "*required");
+            returnval = false;
+        }
+        var cpassword = document.forms['myForm']["fcpassword"].value;
+        if (cpassword != password) {
+            seterror("cpassword", "*Password and Confirm Password should be same!");
+            returnval = false;
+        }
+        if (cpassword.length == 0) {
+            seterror("cpassword", "*required");
+            returnval = false;
+        }
+
+
+
+        return returnval;
+    }
+</script>
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['REQUIRED: YOU NEED TO FILL-UP ALL THE COLUMNS'],
+            typeSpeed: 50, 
+        });
+    </script>
+
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vishnu - Developere Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="about.html"> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(10, 4, 48);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 60px;
+            background-color: rgb(74, 7, 136);
+            
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(145, 145, 238);
+            font-size: 1.02rem;
+        }
+
+        main hr {
+            border: 0;
+            background-color: purple;
+            height: 1.2px;
+            margin: 40px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            margin: 10px 0;
+            align-items: center;
+        }
+
+        .firstSection>div {
+            width: 40%;
+        }
+
+        .leftSection {
+
+            font-size: 2.5rem;
+            margin: 30px 0;
+        }
+
+        .leftSection .btn {
+
+            padding: 5px 5px;
+            background-color: rgb(48, 4, 88);
+            color: white;
+            border: 1px solid white;
+            border-radius: 5px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .leftSection .btn a{
+            color: white;
+            text-decoration-line: none;
+        }
+        
+
+        .rightSection img{
+            width: 80%;
+            /* height: 75vh; */
+            margin: 50px 0;
+            /* background-size: 100% 100%; */
+            /* background-image: url(image/Vs.png); */
+            /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+            /* animation: changeImage 30s linear infinite ; */
+            
+            
+        }
+        /* @keyframes changeImage {
+            0%{
+                background-image: url(image/Vs.png);
+            }
+            25%{
+                background-image: url(image/pic1.png);
+            }
+            50%{
+                background-image: url(image/pic2.png);
+            }
+            75%{
+                background-image: url(image/pic3.png);
+            }
+            100%{
+                background-image: url(image/Developer.png);
+            }
+            
+        } */
+
+        .purple {
+            color: rgb(185, 4, 185);
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(185, 4, 185);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .secondSection .box {
+            background-color: white;
+            width: 180vh;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondSection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 100px;
+
+        }
+
+        .image-top {
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 150px;
+            font-size: 9px;
+        }
+
+        footer {
+            background-color: rgb(26, 26, 102);
+
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 223px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <div class="left"> Vishnu' Portfolio</div>
+            <div class="right">
+            <ul>
+                <li> <a href="index.html">Home</a></li>
+                <li> <a href="about.html" target="_blank">About</a></li>
+                <li> <a href="registration.html" target="_blank">Register</a></li>
+                <li> <a href="loginform.html">login</a></li>
+                <li> <a href="/">Contact Me</a></li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, my name is <span class="purple">Vishnu</span>
+                <div>i am a passionate Web Developer</div>
+                <span id="element"></span>
+                <div>
+                    <button class="btn">Downloadd Resume</button>
+                    <button class="btn"><a href="https://github.com/" target="_blank">Github</a></button>
+                </div>
+
+            </div>
+            <div class="rightSection">
+                <img src="image/Vs.png" alt="">
+
+            </div>
+        </section>
+        <hr>
+
+        <Section class="secondSection">
+            <span class="text-gray"> What i have done so far</span>
+            <h1>Work Experience</h1>
+
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="Developer.png" alt="">
+                    <div class="vertical-title">
+                        HTML Developer (2023-2024)
+
+                    </div>
+
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quos nihil sint aliquam in
+                        tenetur fugiat pariatur harum, numquam laboriosam sunt, ducimus, sed necessitatibus! Sapiente
+                        qui ea
+                        corporis voluptatum perferendis.
+
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="Developer.png" alt="">
+                    <div class="vertical-title">
+                        HTML Developer (2023-2024)
+
+                    </div>
+
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quos nihil sint aliquam in
+                        tenetur fugiat pariatur harum, numquam laboriosam sunt, ducimus, sed necessitatibus! Sapiente
+                        qui ea
+                        corporis voluptatum perferendis.
+
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="Developer.png" alt="">
+                    <div class="vertical-title">
+                        HTML Developer (2023-2024)
+
+                    </div>
+
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quos nihil sint aliquam in
+                        tenetur fugiat pariatur harum, numquam laboriosam sunt, ducimus, sed necessitatibus! Sapiente
+                        qui ea
+                        corporis voluptatum perferendis.
+
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="Developer.png" alt="">
+                    <div class="vertical-title">
+                        HTML Developer (2023-2024)
+
+                    </div>
+
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quos nihil sint aliquam in
+                        tenetur fugiat pariatur harum, numquam laboriosam sunt, ducimus, sed necessitatibus! Sapiente
+                        qui ea
+                        corporis voluptatum perferendis.
+
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="Developer.png" alt="">
+                    <div class="vertical-title">
+                        HTML Developer (2023-2024)
+
+                    </div>
+
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quos nihil sint aliquam in
+                        tenetur fugiat pariatur harum, numquam laboriosam sunt, ducimus, sed necessitatibus! Sapiente
+                        qui ea
+                        corporis voluptatum perferendis.
+
+                    </div>
+                </div>
+                
+
+            </div>
+
+        </Section>
+
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Vishnu's Developer Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Service</li>
+
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Service</li>
+
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Service</li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright &#169; Vishnusporfolio.com | All rights reserved
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer.', 'Graphice Designer.'],
+            typeSpeed: 50, 
+        });
+    </script>
+</body>
+
+</html>
